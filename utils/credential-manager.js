@@ -171,12 +171,11 @@ class CredentialManager {
         name: 'model',
         message: 'Select your preferred model:',
         choices: [
-          'gpt-4-turbo-preview',
-          'gpt-4',
-          'gpt-3.5-turbo',
-          'gpt-3.5-turbo-16k'
+          'gpt-5.5',
+          'gpt-5.5-instant',
+          'gpt-5.4'
         ],
-        default: 'gpt-4-turbo-preview'
+        default: 'gpt-5.5'
       }
     ]);
 
@@ -192,19 +191,30 @@ class CredentialManager {
   // Google Gemini API Setup
   async setupGeminiCredentials() {
     console.log(chalk.cyan('\n💎 Google Gemini API Setup'));
-    console.log(chalk.gray('Get your API key from: https://makersuite.google.com/app/apikey'));
-    
+    console.log(chalk.gray('Get your API key from: https://aistudio.google.com/apikey'));
+
     const answers = await inquirer.prompt([
       {
         type: 'password',
         name: 'apiKey',
         message: 'Enter your Gemini API Key:',
         validate: input => input.length > 0 || 'API key is required'
+      },
+      {
+        type: 'list',
+        name: 'model',
+        message: 'Select your preferred Gemini model:',
+        choices: [
+          'gemini-3.5-flash',
+          'gemini-3.5-pro'
+        ],
+        default: 'gemini-3.5-flash'
       }
     ]);
 
     this.credentials.gemini = {
-      apiKey: answers.apiKey
+      apiKey: answers.apiKey,
+      model: answers.model
     };
 
     await this.saveCredentials();
@@ -427,13 +437,10 @@ class CredentialManager {
     // Test OpenAI API
     if (this.credentials.openai) {
       try {
-        const { Configuration, OpenAIApi } = require('openai');
-        const configuration = new Configuration({
-          apiKey: this.credentials.openai.apiKey,
-        });
-        const openai = new OpenAIApi(configuration);
-        
-        await openai.listModels();
+        const OpenAI = require('openai');
+        const openai = new OpenAI({ apiKey: this.credentials.openai.apiKey });
+
+        await openai.models.list();
         results.openai = true;
         console.log(chalk.green('✅ OpenAI API connection successful'));
       } catch (error) {
@@ -477,8 +484,8 @@ class CredentialManager {
         name: 'service',
         message: 'Select your preferred AI service:',
         choices: [
-          { name: 'OpenAI (GPT-4/GPT-3.5)', value: 'openai' },
-          { name: 'Google Gemini', value: 'gemini' },
+          { name: 'OpenAI (GPT-5.5)', value: 'openai' },
+          { name: 'Google Gemini (Gemini 3.5)', value: 'gemini' },
           { name: 'Both (OpenAI primary)', value: 'both' }
         ]
       }
@@ -500,20 +507,49 @@ class CredentialManager {
         name: 'service',
         message: 'Select your preferred Text-to-Speech service:',
         choices: [
-          { name: 'Azure Speech Services (Recommended)', value: 'azure' },
-          { name: 'Google Cloud TTS', value: 'google' },
-          { name: 'AWS Polly', value: 'aws' },
+          { name: 'OpenAI TTS (gpt-4o-mini-tts, uses your OpenAI key)', value: 'openai-tts' },
+          { name: 'ElevenLabs (highest quality)', value: 'elevenlabs' },
+          { name: 'Azure Speech Services', value: 'azure' },
           { name: 'Skip TTS Setup', value: 'skip' }
         ]
       }
     ]);
 
-    if (service === 'azure') {
+    if (service === 'openai-tts') {
+      console.log(chalk.green('✅ OpenAI TTS will use your existing OpenAI API key'));
+    } else if (service === 'elevenlabs') {
+      await this.setupElevenLabsCredentials();
+    } else if (service === 'azure') {
       await this.setupAzureSpeechCredentials();
-    } else if (service !== 'skip') {
-      console.log(chalk.yellow(`\n⚠️  ${service.toUpperCase()} TTS setup not implemented yet.`));
-      console.log(chalk.gray('You can manually configure it later in config/credentials.json'));
     }
+  }
+
+  async setupElevenLabsCredentials() {
+    console.log(chalk.cyan('\n🎙️  ElevenLabs Setup'));
+    console.log(chalk.gray('Get your API key from: https://elevenlabs.io'));
+
+    const answers = await inquirer.prompt([
+      {
+        type: 'password',
+        name: 'apiKey',
+        message: 'Enter your ElevenLabs API Key:',
+        validate: input => input.length > 0 || 'API key is required'
+      },
+      {
+        type: 'input',
+        name: 'voiceId',
+        message: 'Enter your preferred Voice ID:',
+        validate: input => input.length > 0 || 'Voice ID is required'
+      }
+    ]);
+
+    this.credentials.elevenLabs = {
+      apiKey: answers.apiKey,
+      voiceId: answers.voiceId
+    };
+
+    await this.saveCredentials();
+    console.log(chalk.green('✅ ElevenLabs credentials configured successfully!'));
   }
 }
 
