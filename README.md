@@ -43,25 +43,34 @@ Each agent handles one stage of the pipeline:
 
 ## AI Providers
 
-### OpenAI (recommended)
+All OpenAI-compatible providers work out of the box — the system auto-configures the SDK base URL. Pick one, or use OpenRouter to access everything through a single key.
 
-- **Language**: GPT-5.5 / GPT-5.5 Instant
-- **Images**: GPT Image 2
-- **TTS**: GPT-4o-mini-tts
-- **Cost**: ~$0.05–0.20 per video
+```mermaid
+graph LR
+    subgraph Direct
+        OA[OpenAI<br/>GPT-5.5]
+        GM[Gemini<br/>3.5 Flash/Pro]
+        KM[Kimi<br/>K2.6]
+        MM[MiMo<br/>V2.5 Pro]
+        GL[GLM<br/>GLM-5]
+    end
+    subgraph Router
+        OR[OpenRouter<br/>300+ models]
+    end
+    Direct --> YAA[YouTube Automation Agent]
+    Router --> YAA
+```
 
-### Google Gemini (free tier)
+| Provider | Models | Base URL | Cost |
+|----------|--------|----------|------|
+| **OpenAI** | GPT-5.5, GPT-5.5 Instant | `api.openai.com/v1` | ~$0.05–0.20/video |
+| **OpenRouter** | 300+ (GPT, Claude, Gemini, Kimi, GLM, etc.) | `openrouter.ai/api/v1` | varies by model |
+| **Google Gemini** | Gemini 3.5 Flash, 3.5 Pro | via `@google/genai` SDK | free tier available |
+| **Kimi (Moonshot AI)** | Kimi K2.6, K2.5 | `api.moonshot.ai/v1` | ~80% cheaper than GPT-5.5 |
+| **MiMo (Xiaomi)** | MiMo V2.5 Pro, V2.5 | `api.xiaomimimo.com/v1` | competitive |
+| **GLM (Zhipu AI)** | GLM-5, GLM-5.1 | `api.z.ai/api/paas/v4/` | ~$1/M input tokens |
 
-- **Language**: Gemini 3.5 Flash / Gemini 3.5 Pro
-- **Cost**: Free for most usage volumes
-
-### Other integrations
-
-- Anthropic Claude (`claude-opus-4-8`, `claude-haiku-4-5`)
-- ElevenLabs (premium TTS with Eleven v3)
-- Replicate (Wan 2.7 video generation)
-- Local models via Ollama
-- Any OpenAI-compatible API
+Additional integrations: Anthropic Claude (`claude-opus-4-8`), ElevenLabs (Eleven v3 TTS), Replicate (Wan 2.7 video), local models via Ollama, any OpenAI-compatible endpoint.
 
 ## Quick Start
 
@@ -99,17 +108,34 @@ Dashboard runs at `http://localhost:3456`.
 1. Get a key from [platform.openai.com](https://platform.openai.com/)
 2. Set `OPENAI_API_KEY` in `.env`
 
+#### OpenRouter (easiest — one key, all models)
+
+1. Get a key from [openrouter.ai/keys](https://openrouter.ai/keys)
+2. Set `OPENROUTER_API_KEY` in `.env`
+
 #### Google Gemini
 
 1. Get a key from [Google AI Studio](https://aistudio.google.com/)
 2. Set `GEMINI_API_KEY` in `.env`
 
+#### Kimi / MiMo / GLM
+
+| Provider | Get key at | Env var |
+|----------|-----------|---------|
+| Kimi (Moonshot AI) | [platform.kimi.ai](https://platform.kimi.ai) | `MOONSHOT_API_KEY` |
+| MiMo (Xiaomi) | [mimo.mi.com](https://mimo.mi.com) | `MIMO_API_KEY` |
+| GLM (Zhipu AI) | [z.ai](https://z.ai) | `GLM_API_KEY` |
+
 ### Environment Variables
 
 ```env
-# AI providers (pick one or both)
+# AI provider — pick one (or use OpenRouter for access to all)
 OPENAI_API_KEY=sk-...
+# OPENROUTER_API_KEY=sk-or-...
 # GEMINI_API_KEY=...
+# MOONSHOT_API_KEY=...
+# MIMO_API_KEY=...
+# GLM_API_KEY=...
 
 # Optional: premium TTS
 # ELEVENLABS_API_KEY=...
@@ -284,7 +310,11 @@ MIT — see [LICENSE](LICENSE).
 ## Acknowledgments
 
 - [OpenAI](https://openai.com/) — GPT-5.5, GPT Image 2, GPT-4o-mini-tts
+- [OpenRouter](https://openrouter.ai/) — unified multi-model API
 - [Google](https://ai.google.dev/) — YouTube Data API, Gemini 3.5
+- [Moonshot AI](https://www.moonshot.ai/) — Kimi K2.6
+- [Xiaomi](https://mimo.mi.com/) — MiMo V2.5
+- [Zhipu AI](https://z.ai/) — GLM-5
 - [ElevenLabs](https://elevenlabs.io/) — Eleven v3 TTS
 - [Replicate](https://replicate.com/) — Wan 2.7 video generation
 
