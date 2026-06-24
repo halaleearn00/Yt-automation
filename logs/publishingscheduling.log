@@ -1,0 +1,5 @@
+{"component":"PublishingScheduling","level":"info","message":"Initializing Publishing & Scheduling Agent...","timestamp":"2026-06-24T09:55:29.880Z"}
+{"component":"PublishingScheduling","level":"info","message":"Initializing Publishing & Scheduling Agent...","timestamp":"2026-06-24T09:57:29.808Z"}
+{"component":"PublishingScheduling","level":"info","message":"YouTube API initialized","timestamp":"2026-06-24T09:57:29.809Z"}
+{"component":"PublishingScheduling","level":"info","message":"Loaded 0 items in publish queue","timestamp":"2026-06-24T09:57:29.809Z"}
+{"component":"PublishingScheduling","level":"info","message":"Processing publish queue...","timestamp":"2026-06-24T10:00:00.769Z"}

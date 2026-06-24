@@ -1,0 +1,32 @@
+{"component":"MainAgent","level":"info","message":"Initializing database...","timestamp":"2026-06-24T09:41:25.689Z"}
+{"component":"MainAgent","level":"info","message":"Loading credentials...","timestamp":"2026-06-24T09:41:26.303Z"}
+{"component":"MainAgent","level":"info","message":"Initializing database...","timestamp":"2026-06-24T09:52:44.399Z"}
+{"component":"MainAgent","level":"info","message":"Loading credentials...","timestamp":"2026-06-24T09:52:44.442Z"}
+{"component":"MainAgent","level":"info","message":"Initializing database...","timestamp":"2026-06-24T09:53:27.947Z"}
+{"component":"MainAgent","level":"info","message":"Loading credentials...","timestamp":"2026-06-24T09:53:27.992Z"}
+{"component":"MainAgent","level":"info","message":"Initializing database...","timestamp":"2026-06-24T09:55:29.802Z"}
+{"component":"MainAgent","level":"info","message":"Loading credentials...","timestamp":"2026-06-24T09:55:29.844Z"}
+{"component":"MainAgent","level":"info","message":"Initializing agents...","timestamp":"2026-06-24T09:55:29.851Z"}
+{"component":"MainAgent","level":"info","message":"✓ strategy agent initialized","timestamp":"2026-06-24T09:55:29.869Z"}
+{"component":"MainAgent","level":"info","message":"✓ scriptWriter agent initialized","timestamp":"2026-06-24T09:55:29.870Z"}
+{"component":"MainAgent","level":"info","message":"✓ thumbnailDesigner agent initialized","timestamp":"2026-06-24T09:55:29.875Z"}
+{"component":"MainAgent","level":"info","message":"✓ seoOptimizer agent initialized","timestamp":"2026-06-24T09:55:29.876Z"}
+{"component":"MainAgent","level":"info","message":"✓ production agent initialized","timestamp":"2026-06-24T09:55:29.880Z"}
+{"component":"MainAgent","level":"info","message":"Initializing database...","timestamp":"2026-06-24T09:57:29.595Z"}
+{"component":"MainAgent","level":"info","message":"Loading credentials...","timestamp":"2026-06-24T09:57:29.635Z"}
+{"component":"MainAgent","level":"info","message":"Initializing agents...","timestamp":"2026-06-24T09:57:29.639Z"}
+{"component":"MainAgent","level":"info","message":"✓ strategy agent initialized","timestamp":"2026-06-24T09:57:29.801Z"}
+{"component":"MainAgent","level":"info","message":"✓ scriptWriter agent initialized","timestamp":"2026-06-24T09:57:29.802Z"}
+{"component":"MainAgent","level":"info","message":"✓ thumbnailDesigner agent initialized","timestamp":"2026-06-24T09:57:29.804Z"}
+{"component":"MainAgent","level":"info","message":"✓ seoOptimizer agent initialized","timestamp":"2026-06-24T09:57:29.805Z"}
+{"component":"MainAgent","level":"info","message":"✓ production agent initialized","timestamp":"2026-06-24T09:57:29.808Z"}
+{"component":"MainAgent","level":"info","message":"✓ publishing agent initialized","timestamp":"2026-06-24T09:57:29.809Z"}
+{"component":"MainAgent","level":"info","message":"✓ analytics agent initialized","timestamp":"2026-06-24T09:57:29.811Z"}
+{"component":"MainAgent","level":"info","message":"Setting up automation scheduler...","timestamp":"2026-06-24T09:57:29.814Z"}
+{"component":"MainAgent","level":"info","message":"YouTube Automation Agent initialized successfully!","timestamp":"2026-06-24T09:57:29.819Z"}
+{"component":"MainAgent","level":"info","message":"Starting content generation pipeline...","timestamp":"2026-06-24T10:00:46.687Z"}
+{"component":"MainAgent","level":"info","message":"Strategy generated: Technology Trends","timestamp":"2026-06-24T10:00:46.735Z"}
+{"component":"MainAgent","level":"info","message":"Script generated: The Truth About Technology Trends (Shocking Results)","timestamp":"2026-06-24T10:00:46.766Z"}
+{"component":"MainAgent","level":"info","message":"Thumbnail generated","timestamp":"2026-06-24T10:01:00.837Z"}
+{"component":"MainAgent","level":"info","message":"SEO optimization complete","timestamp":"2026-06-24T10:01:00.864Z"}
+{"component":"MainAgent","level":"info","message":"Production processing complete","timestamp":"2026-06-24T10:01:01.253Z"}

@@ -1,0 +1,107 @@
+{"component":"MainAgent","level":"info","message":"Initializing database...","timestamp":"2026-06-24T09:41:25.689Z"}
+{"component":"Database","level":"info","message":"Initializing database...","timestamp":"2026-06-24T09:41:25.714Z"}
+{"component":"Database","level":"info","message":"Database initialized successfully","timestamp":"2026-06-24T09:41:26.302Z"}
+{"component":"MainAgent","level":"info","message":"Loading credentials...","timestamp":"2026-06-24T09:41:26.303Z"}
+{"component":"MainAgent","level":"info","message":"Initializing database...","timestamp":"2026-06-24T09:52:44.399Z"}
+{"component":"Database","level":"info","message":"Initializing database...","timestamp":"2026-06-24T09:52:44.427Z"}
+{"component":"Database","level":"info","message":"Database initialized successfully","timestamp":"2026-06-24T09:52:44.442Z"}
+{"component":"MainAgent","level":"info","message":"Loading credentials...","timestamp":"2026-06-24T09:52:44.442Z"}
+{"component":"MainAgent","level":"info","message":"Initializing database...","timestamp":"2026-06-24T09:53:27.947Z"}
+{"component":"Database","level":"info","message":"Initializing database...","timestamp":"2026-06-24T09:53:27.979Z"}
+{"component":"Database","level":"info","message":"Database initialized successfully","timestamp":"2026-06-24T09:53:27.992Z"}
+{"component":"MainAgent","level":"info","message":"Loading credentials...","timestamp":"2026-06-24T09:53:27.992Z"}
+{"component":"MainAgent","level":"info","message":"Initializing database...","timestamp":"2026-06-24T09:55:29.802Z"}
+{"component":"Database","level":"info","message":"Initializing database...","timestamp":"2026-06-24T09:55:29.829Z"}
+{"component":"Database","level":"info","message":"Database initialized successfully","timestamp":"2026-06-24T09:55:29.843Z"}
+{"component":"MainAgent","level":"info","message":"Loading credentials...","timestamp":"2026-06-24T09:55:29.844Z"}
+{"component":"MainAgent","level":"info","message":"Initializing agents...","timestamp":"2026-06-24T09:55:29.851Z"}
+{"component":"ContentStrategy","level":"info","message":"Initializing Content Strategy Agent...","timestamp":"2026-06-24T09:55:29.859Z"}
+{"component":"AIVideoGenerator","level":"warn","message":"OpenAI API key not found - AI features will be simulated","timestamp":"2026-06-24T09:55:29.857Z"}
+{"component":"ContentStrategy","error":"Cannot read properties of undefined (reading '0')","level":"error","message":"Error analyzing trends:","stack":"TypeError: Cannot read properties of undefined (reading '0')\n    at CredentialManager.getYouTubeAuth (C:\\Windows\\System32\\youtube-automation-agent\\utils\\credential-manager.js:145:45)\n    at CredentialManager.getYouTubeClient (C:\\Windows\\System32\\youtube-automation-agent\\utils\\credential-manager.js:153:23)\n    at ContentStrategyAgent.fetchYouTubeTrends (C:\\Windows\\System32\\youtube-automation-agent\\agents\\content-strategy-agent.js:50:38)\n    at ContentStrategyAgent.analyzeTrends (C:\\Windows\\System32\\youtube-automation-agent\\agents\\content-strategy-agent.js:34:33)\n    at ContentStrategyAgent.initialize (C:\\Windows\\System32\\youtube-automation-agent\\agents\\content-strategy-agent.js:17:16)\n    at async YouTubeAutomationAgent.initializeAgents (C:\\Windows\\System32\\youtube-automation-agent\\index.js:82:7)\n    at async YouTubeAutomationAgent.initialize (C:\\Windows\\System32\\youtube-automation-agent\\index.js:49:7)\n    at async YouTubeAutomationAgent.start (C:\\Windows\\System32\\youtube-automation-agent\\index.js:189:25)","timestamp":"2026-06-24T09:55:29.868Z"}
+{"component":"MainAgent","level":"info","message":"✓ strategy agent initialized","timestamp":"2026-06-24T09:55:29.869Z"}
+{"component":"ScriptWriter","level":"info","message":"Initializing Script Writer Agent...","timestamp":"2026-06-24T09:55:29.869Z"}
+{"component":"ThumbnailDesigner","level":"info","message":"Initializing Thumbnail Designer Agent...","timestamp":"2026-06-24T09:55:29.870Z"}
+{"component":"AIVideoGenerator","level":"warn","message":"Replicate API key not found - advanced video generation unavailable","timestamp":"2026-06-24T09:55:29.857Z"}
+{"component":"MainAgent","level":"info","message":"✓ scriptWriter agent initialized","timestamp":"2026-06-24T09:55:29.870Z"}
+{"component":"MainAgent","level":"info","message":"✓ thumbnailDesigner agent initialized","timestamp":"2026-06-24T09:55:29.875Z"}
+{"component":"SEOOptimizer","level":"info","message":"Initializing SEO Optimizer Agent...","timestamp":"2026-06-24T09:55:29.875Z"}
+{"component":"MainAgent","level":"info","message":"✓ seoOptimizer agent initialized","timestamp":"2026-06-24T09:55:29.876Z"}
+{"component":"ProductionManagement","level":"info","message":"Initializing Production Management Agent...","timestamp":"2026-06-24T09:55:29.876Z"}
+{"component":"MainAgent","level":"info","message":"✓ production agent initialized","timestamp":"2026-06-24T09:55:29.880Z"}
+{"component":"PublishingScheduling","level":"info","message":"Initializing Publishing & Scheduling Agent...","timestamp":"2026-06-24T09:55:29.880Z"}
+{"component":"MainAgent","level":"info","message":"Initializing database...","timestamp":"2026-06-24T09:57:29.595Z"}
+{"component":"Database","level":"info","message":"Initializing database...","timestamp":"2026-06-24T09:57:29.621Z"}
+{"component":"Database","level":"info","message":"Database initialized successfully","timestamp":"2026-06-24T09:57:29.634Z"}
+{"component":"MainAgent","level":"info","message":"Loading credentials...","timestamp":"2026-06-24T09:57:29.635Z"}
+{"component":"MainAgent","level":"info","message":"Initializing agents...","timestamp":"2026-06-24T09:57:29.639Z"}
+{"component":"ContentStrategy","level":"info","message":"Initializing Content Strategy Agent...","timestamp":"2026-06-24T09:57:29.646Z"}
+{"component":"AIVideoGenerator","level":"warn","message":"OpenAI API key not found - AI features will be simulated","timestamp":"2026-06-24T09:57:29.644Z"}
+{"component":"AIVideoGenerator","level":"warn","message":"Replicate API key not found - advanced video generation unavailable","timestamp":"2026-06-24T09:57:29.645Z"}
+{"component":"ContentStrategy","error":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","level":"error","message":"Failed to fetch YouTube trends:","stack":"Error: Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\n    at Gaxios._request (C:\\Windows\\System32\\youtube-automation-agent\\node_modules\\googleapis-common\\node_modules\\gaxios\\build\\cjs\\src\\gaxios.js:155:23)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async OAuth2Client.requestAsync (C:\\Windows\\System32\\youtube-automation-agent\\node_modules\\googleapis-common\\node_modules\\google-auth-library\\build\\src\\auth\\oauth2client.js:463:20)\n    at async createAPIRequestAsync (C:\\Windows\\System32\\youtube-automation-agent\\node_modules\\googleapis-common\\build\\src\\apirequest.js:308:25)\n    at async ContentStrategyAgent.fetchYouTubeTrends (C:\\Windows\\System32\\youtube-automation-agent\\agents\\content-strategy-agent.js:53:24)\n    at async ContentStrategyAgent.analyzeTrends (C:\\Windows\\System32\\youtube-automation-agent\\agents\\content-strategy-agent.js:34:22)\n    at async ContentStrategyAgent.initialize (C:\\Windows\\System32\\youtube-automation-agent\\agents\\content-strategy-agent.js:17:5)\n    at async YouTubeAutomationAgent.initializeAgents (C:\\Windows\\System32\\youtube-automation-agent\\index.js:82:7)\n    at async YouTubeAutomationAgent.initialize (C:\\Windows\\System32\\youtube-automation-agent\\index.js:49:7)\n    at async YouTubeAutomationAgent.start (C:\\Windows\\System32\\youtube-automation-agent\\index.js:189:25)","timestamp":"2026-06-24T09:57:29.800Z"}
+{"component":"MainAgent","level":"info","message":"✓ strategy agent initialized","timestamp":"2026-06-24T09:57:29.801Z"}
+{"component":"ScriptWriter","level":"info","message":"Initializing Script Writer Agent...","timestamp":"2026-06-24T09:57:29.802Z"}
+{"component":"ThumbnailDesigner","level":"info","message":"Initializing Thumbnail Designer Agent...","timestamp":"2026-06-24T09:57:29.802Z"}
+{"component":"ContentStrategy","level":"info","message":"Identified 0 trending topics","timestamp":"2026-06-24T09:57:29.801Z"}
+{"component":"MainAgent","level":"info","message":"✓ scriptWriter agent initialized","timestamp":"2026-06-24T09:57:29.802Z"}
+{"component":"MainAgent","level":"info","message":"✓ thumbnailDesigner agent initialized","timestamp":"2026-06-24T09:57:29.804Z"}
+{"component":"SEOOptimizer","level":"info","message":"Initializing SEO Optimizer Agent...","timestamp":"2026-06-24T09:57:29.804Z"}
+{"component":"MainAgent","level":"info","message":"✓ seoOptimizer agent initialized","timestamp":"2026-06-24T09:57:29.805Z"}
+{"component":"ProductionManagement","level":"info","message":"Initializing Production Management Agent...","timestamp":"2026-06-24T09:57:29.805Z"}
+{"component":"MainAgent","level":"info","message":"✓ production agent initialized","timestamp":"2026-06-24T09:57:29.808Z"}
+{"component":"PublishingScheduling","level":"info","message":"Initializing Publishing & Scheduling Agent...","timestamp":"2026-06-24T09:57:29.808Z"}
+{"component":"PublishingScheduling","level":"info","message":"YouTube API initialized","timestamp":"2026-06-24T09:57:29.809Z"}
+{"component":"PublishingScheduling","level":"info","message":"Loaded 0 items in publish queue","timestamp":"2026-06-24T09:57:29.809Z"}
+{"component":"MainAgent","level":"info","message":"✓ publishing agent initialized","timestamp":"2026-06-24T09:57:29.809Z"}
+{"component":"AnalyticsOptimization","level":"info","message":"Initializing Analytics & Optimization Agent...","timestamp":"2026-06-24T09:57:29.810Z"}
+{"component":"AnalyticsOptimization","level":"info","message":"YouTube Analytics API initialized","timestamp":"2026-06-24T09:57:29.810Z"}
+{"component":"AnalyticsOptimization","level":"info","message":"Loaded 0 historical records","timestamp":"2026-06-24T09:57:29.811Z"}
+{"component":"MainAgent","level":"info","message":"✓ analytics agent initialized","timestamp":"2026-06-24T09:57:29.811Z"}
+{"component":"MainAgent","level":"info","message":"Setting up automation scheduler...","timestamp":"2026-06-24T09:57:29.814Z"}
+{"component":"MainAgent","level":"info","message":"YouTube Automation Agent initialized successfully!","timestamp":"2026-06-24T09:57:29.819Z"}
+{"component":"DailyAutomation","level":"info","message":"Initializing daily automation scheduler...","timestamp":"2026-06-24T09:57:29.815Z"}
+{"component":"DailyAutomation","level":"info","message":"Started scheduled task: daily-content-generation","timestamp":"2026-06-24T09:57:29.818Z"}
+{"component":"DailyAutomation","level":"info","message":"Started scheduled task: publish-queue-processing","timestamp":"2026-06-24T09:57:29.818Z"}
+{"component":"DailyAutomation","level":"info","message":"Started scheduled task: daily-analytics","timestamp":"2026-06-24T09:57:29.818Z"}
+{"component":"DailyAutomation","level":"info","message":"Started scheduled task: weekly-strategy-review","timestamp":"2026-06-24T09:57:29.818Z"}
+{"component":"DailyAutomation","level":"info","message":"Started scheduled task: daily-optimization","timestamp":"2026-06-24T09:57:29.819Z"}
+{"component":"DailyAutomation","level":"info","message":"Started scheduled task: database-maintenance","timestamp":"2026-06-24T09:57:29.819Z"}
+{"component":"DailyAutomation","level":"info","message":"Daily automation initialized successfully","timestamp":"2026-06-24T09:57:29.819Z"}
+{"component":"PublishingScheduling","level":"info","message":"Processing publish queue...","timestamp":"2026-06-24T10:00:00.769Z"}
+{"component":"MainAgent","level":"info","message":"Starting content generation pipeline...","timestamp":"2026-06-24T10:00:46.687Z"}
+{"component":"ContentStrategy","level":"info","message":"Generated strategy for: Technology Trends","timestamp":"2026-06-24T10:00:46.734Z"}
+{"component":"MainAgent","level":"info","message":"Strategy generated: Technology Trends","timestamp":"2026-06-24T10:00:46.735Z"}
+{"component":"ScriptWriter","level":"info","message":"Generating script for: Technology Trends","timestamp":"2026-06-24T10:00:46.736Z"}
+{"component":"ScriptWriter","level":"info","message":"Script generated: The Truth About Technology Trends (Shocking Results)","timestamp":"2026-06-24T10:00:46.766Z"}
+{"component":"MainAgent","level":"info","message":"Script generated: The Truth About Technology Trends (Shocking Results)","timestamp":"2026-06-24T10:00:46.766Z"}
+{"component":"ThumbnailDesigner","level":"info","message":"Generating thumbnail for: The Truth About Technology Trends (Shocking Results)","timestamp":"2026-06-24T10:00:46.767Z"}
+{"component":"ThumbnailDesigner","level":"info","message":"Thumbnail generated successfully","timestamp":"2026-06-24T10:01:00.836Z"}
+{"component":"MainAgent","level":"info","message":"Thumbnail generated","timestamp":"2026-06-24T10:01:00.837Z"}
+{"component":"SEOOptimizer","level":"info","message":"Optimizing SEO for: The Truth About Technology Trends (Shocking Results)","timestamp":"2026-06-24T10:01:00.837Z"}
+{"component":"SEOOptimizer","level":"info","message":"SEO optimization complete. Score: 90/100","timestamp":"2026-06-24T10:01:00.864Z"}
+{"component":"MainAgent","level":"info","message":"SEO optimization complete","timestamp":"2026-06-24T10:01:00.864Z"}
+{"component":"ProductionManagement","level":"info","message":"Processing content for production...","timestamp":"2026-06-24T10:01:00.865Z"}
+{"component":"AIVideoGenerator","level":"info","message":"Generating custom thumbnail...","timestamp":"2026-06-24T10:01:00.868Z"}
+{"component":"AIVideoGenerator","level":"info","message":"Simulating thumbnail generation...","timestamp":"2026-06-24T10:01:00.868Z"}
+{"component":"ProductionManagement","level":"info","message":"Generating AI video content...","timestamp":"2026-06-24T10:01:00.895Z"}
+{"component":"AIVideoGenerator","level":"info","message":"Generating 1 visual assets with style: ethereal","timestamp":"2026-06-24T10:01:00.896Z"}
+{"component":"AIVideoGenerator","level":"info","message":"Simulating 1 visual assets...","timestamp":"2026-06-24T10:01:00.896Z"}
+{"component":"AIVideoGenerator","level":"info","message":"Generating 1 visual assets with style: ethereal","timestamp":"2026-06-24T10:01:00.897Z"}
+{"component":"AIVideoGenerator","level":"info","message":"Simulating 1 visual assets...","timestamp":"2026-06-24T10:01:00.898Z"}
+{"component":"AIVideoGenerator","level":"info","message":"Generating 1 visual assets with style: ethereal","timestamp":"2026-06-24T10:01:00.899Z"}
+{"component":"AIVideoGenerator","level":"info","message":"Simulating 1 visual assets...","timestamp":"2026-06-24T10:01:00.899Z"}
+{"component":"AIVideoGenerator","level":"info","message":"Generating 1 visual assets with style: ethereal","timestamp":"2026-06-24T10:01:00.900Z"}
+{"component":"AIVideoGenerator","level":"info","message":"Simulating 1 visual assets...","timestamp":"2026-06-24T10:01:00.900Z"}
+{"component":"AIVideoGenerator","level":"info","message":"Generating 1 visual assets with style: ethereal","timestamp":"2026-06-24T10:01:00.901Z"}
+{"component":"AIVideoGenerator","level":"info","message":"Simulating 1 visual assets...","timestamp":"2026-06-24T10:01:00.901Z"}
+{"component":"ProductionManagement","level":"info","message":"Generating AI audio narration...","timestamp":"2026-06-24T10:01:00.902Z"}
+{"component":"AIVideoGenerator","level":"info","message":"Generating TTS audio...","timestamp":"2026-06-24T10:01:00.903Z"}
+{"component":"AIVideoGenerator","level":"info","message":"Simulating TTS generation...","timestamp":"2026-06-24T10:01:00.904Z"}
+{"component":"ProductionManagement","level":"info","message":"Generating captions...","timestamp":"2026-06-24T10:01:00.905Z"}
+{"component":"ProductionManagement","level":"info","message":"Assembling final AI-generated video...","timestamp":"2026-06-24T10:01:00.907Z"}
+{"component":"AIVideoGenerator","level":"info","message":"Generating video from assets...","timestamp":"2026-06-24T10:01:00.907Z"}
+{"component":"AIVideoGenerator","level":"info","message":"Creating slideshow video...","timestamp":"2026-06-24T10:01:00.908Z"}
+{"component":"AIVideoGenerator","error":"browserType.launch: Executable doesn't exist at C:\\Users\\runneradmin\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1181\\chrome-win\\headless_shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝","level":"error","message":"Video generation failed:","stack":"browserType.launch: Executable doesn't exist at C:\\Users\\runneradmin\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1181\\chrome-win\\headless_shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝\n    at AIVideoGenerator.generateSlideshowVideo (C:\\Windows\\System32\\youtube-automation-agent\\utils\\ai-video-generator.js:231:36)\n    at AIVideoGenerator.generateVideo (C:\\Windows\\System32\\youtube-automation-agent\\utils\\ai-video-generator.js:196:25)\n    at ProductionManagementAgent.assembleVideo (C:\\Windows\\System32\\youtube-automation-agent\\agents\\production-management-agent.js:565:35)\n    at ProductionManagementAgent.processContent (C:\\Windows\\System32\\youtube-automation-agent\\agents\\production-management-agent.js:101:18)\n    at async YouTubeAutomationAgent.generateContent (C:\\Windows\\System32\\youtube-automation-agent\\index.js:169:28)\n    at async C:\\Windows\\System32\\youtube-automation-agent\\index.js:110:24","timestamp":"2026-06-24T10:01:01.226Z"}
+{"component":"AIVideoGenerator","level":"info","message":"Simulating video generation...","timestamp":"2026-06-24T10:01:01.227Z"}
+{"component":"ProductionManagement","error":"ENOENT: no such file or directory, stat 'C:\\Windows\\System32\\youtube-automation-agent\\data\\videos\\prod_1782295260865_w7v9i7namk_j7lmv8p1s_final.mp4'","level":"error","message":"AI video assembly failed:","stack":"Error: ENOENT: no such file or directory, stat 'C:\\Windows\\System32\\youtube-automation-agent\\data\\videos\\prod_1782295260865_w7v9i7namk_j7lmv8p1s_final.mp4'\n    at async Object.stat (node:internal/fs/promises:1686:18)\n    at async ProductionManagementAgent.assembleVideo (C:\\Windows\\System32\\youtube-automation-agent\\agents\\production-management-agent.js:573:21)\n    at async ProductionManagementAgent.processContent (C:\\Windows\\System32\\youtube-automation-agent\\agents\\production-management-agent.js:101:7)\n    at async YouTubeAutomationAgent.generateContent (C:\\Windows\\System32\\youtube-automation-agent\\index.js:169:28)\n    at async C:\\Windows\\System32\\youtube-automation-agent\\index.js:110:24","timestamp":"2026-06-24T10:01:01.228Z"}
+{"component":"ProductionManagement","level":"info","message":"Content processing complete: prod_1782295260865_w7v9i7namk_j7lmv8p1s","timestamp":"2026-06-24T10:01:01.253Z"}
+{"component":"MainAgent","level":"info","message":"Production processing complete","timestamp":"2026-06-24T10:01:01.253Z"}
